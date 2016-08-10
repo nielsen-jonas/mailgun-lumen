@@ -19,7 +19,7 @@ class MailController extends Controller
         $username = 'Jonas';
         $email = 'master@jonas92.com';
 
-        Mail::send('email/verify_email', [
+        Mail::send('email/welcome', [
         'username' => $username
         ], function ($message) use ($email) {
             $message->from('mailbot@website.com', 'Website');
